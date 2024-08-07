@@ -1,0 +1,49 @@
+* { /*Első körben az összes elem alapértelmezett margóját és paddingját 0-ra állítom. */
+    padding:0;
+    margin:0;
+    border:0; 
+}
+article header,article p {
+    background-color: antiquewhite;
+    padding:10;
+    margin:10;
+    border:10;
+
+}
+section{
+    display:flex;
+    flex-flow: row wrap;/*row tárololok egymás mellé
+    wrap:egymás mellet dobozok törése ha nem fér elegy sorba*/
+    align-items: stretch;/*bobozon beluli igazolás*/
+    justify-content: space-around;
+    margin: 0 auto;
+    flex-flow: column-reverse wrap;/*egymás allat legyenek az oszlopok*/
+    /*1. flex-flow: column-reverse wrap;=> egymás mellet legyenek a box ok
+      2. flex-flow: row-reverse wrap=> egymás mellet és alat egyforma nagyságu dobozok (A szöveg nagyságátol függyetlenül)
+      3. align-items: flex-start;=> ugyanez csak a dobozok pont akkorák mint a szöveg de a cimek egy sorban vannak
+      4. align-items: flex-end; => ugyanez csak nem a cimek vannak egy sorban , hanem a dobozok alja van egy vonalban*/
+}
+article{
+    text-align: justify;
+    color: antiquewhite;
+    margin: 5px;
+    background: #9c9c9c;
+    flex:1 1 200px/*grow, shrink,basis*/
+    /*•	flex-grow: az adott elem többihez képesti méretét jelenti. 
+    •	felx-basis: az elemek alapértelmezett szélességét jelenti. 
+    •	flex-shrink: az elem kicsinyítését engedélyezi, vagy tiltja. 
+    */
+}
+article:nth-of-type(4)  {
+    flex-grow: 10; 
+  }/*4. article tag szélességét a többihez képest növelni szeretnénk*/
+article:nthh-of-type(1) {order: 3}
+article:nthh-of-type(1) {order: 2}
+article:nthh-of-type(1) {order: 5}
+article:nthh-of-type(1) {order: 1}
+article:nthh-of-type(1) {order: 4}
+  /*Megadhatjuk az egyes elemek sorrendjét kézileg is. Figyeljük meg, hogy alakul a mintán a article elemek címe! */
+
+  header h2, p{
+    color: black;
+  }
